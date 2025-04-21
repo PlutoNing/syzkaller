@@ -25,3 +25,4 @@ executor/syscalls.h
 
 # vscode
 .vscode
+tools/bullseye

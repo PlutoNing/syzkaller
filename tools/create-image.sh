@@ -14,7 +14,8 @@ if [ -z ${ADD_PACKAGE+x} ]; then
     ADD_PACKAGE="make,sysbench,git,vim,tmux,usbutils,tcpdump"
 fi
 
-# Variables affected by options
+# Variables affected by options，
+# 在这里可以直接修改默认设置
 ARCH=$(uname -m)
 RELEASE=bullseye
 FEATURE=minimal
@@ -74,7 +75,7 @@ while true; do
     esac
 done
 
-# Handle cases where qemu and Debian use different arch names
+# 把ubuntu的命名转为debian的命名
 case "$ARCH" in
     ppc64le)
         DEBARCH=ppc64el
